@@ -4,6 +4,6 @@ public class PlayerPieceO extends PlayerPiece
 {
     PlayerPieceO()
     {
-        super(PlayerType.X);
+        super(PlayerType.O);
     }
 }
