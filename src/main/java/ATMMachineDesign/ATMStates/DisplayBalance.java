@@ -9,5 +9,6 @@ public class DisplayBalance extends State
     public void displayBalance(ATM atm, Card card)
     {
         System.out.println("Balance displayed");
+        atm.setAtmState(new IdleState());
     }
 }

@@ -14,4 +14,9 @@ public class User
     {
         return bankAccount;
     }
+
+    public void setCard(Card card)
+    {
+        this.card = card;
+    }
 }

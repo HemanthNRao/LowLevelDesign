@@ -9,5 +9,6 @@ public class IdleState extends State
     public void insertCard(ATM atm, Card card)
     {
         System.out.println("Card inserted successfully");
+        atm.setAtmState(new HasCard());
     }
 }
