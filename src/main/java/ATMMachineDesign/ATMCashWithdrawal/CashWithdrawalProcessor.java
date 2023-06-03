@@ -1,7 +1,6 @@
 package ATMMachineDesign.ATMCashWithdrawal;
 
 import ATMMachineDesign.ATM;
-import ATMMachineDesign.Card;
 
 public class CashWithdrawalProcessor
 {

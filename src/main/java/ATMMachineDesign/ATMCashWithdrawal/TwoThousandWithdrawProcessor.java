@@ -21,10 +21,9 @@ public class TwoThousandWithdrawProcessor extends CashWithdrawalProcessor
         }
         else if(required > atm.getNoOfTwoThousandNotes())
         {
-            atm.deductTwoThousandNotes(atm.getNoOfTwoThousandNotes());
             balance += (required-atm.getNoOfFiveHundredNotes()) * 2000;
+            atm.deductTwoThousandNotes(atm.getNoOfTwoThousandNotes());
         }
-
         if(balance != 0)
         {
             super.withdraw(atm, balance);

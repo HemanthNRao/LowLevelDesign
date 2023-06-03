@@ -14,7 +14,7 @@ public class Main
         main.atm.getCurrentATMState().insertCard(main.atm, main.user.card);
         main.atm.getCurrentATMState().authenticatePin(main.atm, main.user.card, "112211");
         main.atm.getCurrentATMState().selectOperation(main.atm, main.user.card, TransactionType.CASH_WITHDRAWAL);
-        main.atm.getCurrentATMState().cashWithdrawal(main.atm, main.user.card, 2700);
+        main.atm.getCurrentATMState().cashWithdrawal(main.atm, main.user.card, 3200);
         main.atm.printCurrentATMStatus();
 
 
@@ -24,7 +24,7 @@ public class Main
 
         //create ATM
         atm = ATM.getATMObject();
-        atm.setATMBalance(3500, 1,2,5);
+        atm.setATMBalance(3500, 1,1,10);
 
         //create User
         this.user = createUser();
@@ -47,7 +47,7 @@ public class Main
     private BankAccount createBankAccount() {
 
         BankAccount bankAccount = new BankAccount();
-        bankAccount.balance = 3000;
+        bankAccount.balance = 3500;
 
         return bankAccount;
 

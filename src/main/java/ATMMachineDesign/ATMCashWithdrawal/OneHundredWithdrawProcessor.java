@@ -15,16 +15,15 @@ public class OneHundredWithdrawProcessor extends CashWithdrawalProcessor
         int required = remainingAmount/100;
         int balance = remainingAmount%100;
 
-        if(required <= atm.getNoOfTwoThousandNotes())
+        if(required <= atm.getNoOfOneHundredNotes())
         {
-            atm.deductTwoThousandNotes(required);
+            atm.deductOneHundredNotes(required);
         }
-        else if(required > atm.getNoOfTwoThousandNotes())
+        else if(required > atm.getNoOfOneHundredNotes())
         {
-            atm.deductTwoThousandNotes(atm.getNoOfTwoThousandNotes());
-            balance += (required - atm.getNoOfTwoThousandNotes())*100;
+            balance += (required - atm.getNoOfOneHundredNotes())*100;
+            atm.deductOneHundredNotes(atm.getNoOfOneHundredNotes());
         }
-
         if(balance != 0)
         {
             System.out.println("Something went wrong!");

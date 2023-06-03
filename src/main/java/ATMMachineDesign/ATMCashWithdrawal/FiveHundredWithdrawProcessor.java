@@ -22,11 +22,9 @@ public class FiveHundredWithdrawProcessor extends CashWithdrawalProcessor
 
         else if(required>atm.getNoOfFiveHundredNotes())
         {
-
-            atm.deductFiveHundredNotes(atm.getNoOfFiveHundredNotes());
             balance += (required-atm.getNoOfFiveHundredNotes()) * 500;
+            atm.deductFiveHundredNotes(atm.getNoOfFiveHundredNotes());
         }
-
         if(balance!=0)
         {
             super.withdraw(atm, balance);
