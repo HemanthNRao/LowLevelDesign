@@ -31,6 +31,7 @@ public class WithdrawCash extends State
                             new FiveHundredWithdrawProcessor(new OneHundredWithdrawProcessor(null)));
             cashWithdrawalProcessor.withdraw(atm, amount);
             exit(atm, card);
+
         }
     }
 }
